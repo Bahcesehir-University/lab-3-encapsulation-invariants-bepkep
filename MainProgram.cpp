@@ -102,7 +102,7 @@ public:
     // Getter: return the current balance
     double getBalance() const {
         // TODO: Implement
-        return 0.0;
+        return balance_;
     }
 
     // Deposit money into the account.
@@ -158,7 +158,7 @@ private:
     static bool hasDigit(const string& s) {
         // TODO: Implement
         for (char c : s){
-            if (c >= '0' && c <= '9'){
+            if (c >= '0'&& c <= '9'){
                 return true;
             }   
         }
