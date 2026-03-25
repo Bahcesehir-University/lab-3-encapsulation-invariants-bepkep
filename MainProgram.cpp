@@ -135,6 +135,9 @@ public:
     // Throw std::runtime_error if insufficient funds
     void transfer(BankAccount& other, double amount) {
         // TODO: Implement using withdraw() and deposit()
+        if(amount >=balance_){
+            throw runtime_error ("insufficient funds");
+        }
         if(amount <= 0){
              throw invalid_argument("Transfer amount must be positive");
         }
